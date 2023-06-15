@@ -3,7 +3,7 @@ import Image from "next/future/image";
 import { useEffect, useState } from "preact/hooks";
 import { Activity, useLanyard } from "react-use-lanyard";
 
-const USER_ID = "1113690068113170484";
+const USER_ID = "299707523370319883";
 
 const statusColors: Record<string, string> = {
 	online: "bg-emerald-500",

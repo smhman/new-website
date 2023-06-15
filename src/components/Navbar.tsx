@@ -35,8 +35,8 @@ const pages: PageData[] = [
 		color: "text-rose-400"
 	},
 	{
-		href: "/tvshows",
-		title: "TV Shows",
+		href: "/anime",
+		title: "Anime",
 		Icon: SparklesIcon,
 		color: "text-yellow-300"
 	},
