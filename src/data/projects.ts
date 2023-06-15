@@ -20,23 +20,23 @@ export interface ProjectInfo {
 
 export const projects: ProjectInfo[] = [
 	{
-		name: "nimi.li",
+		name: "GTOS",
 		description:
-			"Online, interactive toki pona dictionary which uses public data about popular words and compounds.",
-		image: "/images/projects/sona.png",
-		url: "https://nimi.li",
+			"\"GTOS\" is a popular private server for the multiplayer sandbox game Growtopia. It offers an exclusive and customized gaming experience, providing players with unique features, events, and a vibrant community, enhancing the excitement and creativity of the Growtopia universe.",
+		image: "/images/projects/gtos.jpg",
+		url: "https://crystalps.eu",
 		stack: [
 			{
-				name: "TailwindCSS",
-				icon: "tailwindcss"
+				name: "C++",
+				icon: "cpp"
 			},
 			{
-				name: "SvelteKit",
-				icon: "svelte"
+				name: "HTML",
+				icon: "html"
 			},
 			{
-				name: "TypeScript",
-				icon: "ts"
+				name: "JavaScript",
+				icon: "js"
 			}
 		]
 	},

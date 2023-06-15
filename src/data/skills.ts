@@ -13,6 +13,12 @@ export const skills: SkillInfo[] = [
 		bg: "#3279cc"
 	},
 	{
+		name: "C++",
+		icon: "cpp",
+		href: "https://isocpp.org",
+		bg: "#3279cc"
+	},
+	{
 		name: "JavaScript",
 		icon: "js",
 		href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",

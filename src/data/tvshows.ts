@@ -19,16 +19,16 @@ export const anime: AnimeInfo[] = [
 		url: "https://www.paramountplus.com/shows/victorious/"
 	},
 	{
-		name: "Tokyo Ghoul",
-		description: "Cannibalism.",
-		image: "/images/anime/tokyo.jpg",
-		url: "https://anilist.co/anime/20605/Tokyo-Ghoul/"
+		name: "Eurovision Song Contest",
+		description: "The Eurovision Song Contest is a global singing competition where countries showcase original songs and viewers vote for their favorites. It's a celebration of music and cultural diversity.",
+		image: "/images/tvshows/eurovision.jpg",
+		url: "https://eurovision.tv"
 	},
 	{
-		name: "Jujutsu Kaisen",
-		description: "",
-		image: "/images/anime/jujutsu.jpg",
-		url: "https://anilist.co/anime/113415/Jujutsu-Kaisen/"
+		name: "Big Time Rush",
+		description: "\"Big Time Rush\" is a popular TV show about four friends who become a boy band and navigate the ups and downs of the music industry while balancing fame and friendship. It features comedy, music, and relatable coming-of-age themes.",
+		image: "/images/tvshows/btr.jpg",
+		url: "https://www.paramountplus.com/shows/big-time-rush/"
 	},
 	{
 		name: "Komi Can't Communicate",
