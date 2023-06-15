@@ -122,14 +122,13 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
   
 	  return () => clearInterval(interval);
 	}, []);
-
+	const endTimestamp = activities?.map(activity.timestamps?.end ?? now);
+	const durationInSeconds = differenceInSeconds(now, endTimestamp);
+	const minutes = Math.floor(durationInSeconds / 60);
+	const seconds = durationInSeconds % 60;
 	return (
 		<>
 			{activities?.map(activity => (
-				const endTimestamp = activity.timestamps?.end ?? now;
-				const durationInSeconds = differenceInSeconds(now, endTimestamp);
-				const minutes = Math.floor(durationInSeconds / 60);
-				const seconds = durationInSeconds % 60;
 				<p key={activity.id} className="flex-grow">
 					<span className="opacity-80">
 						{getActivityType(activity.type)}
