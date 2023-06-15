@@ -1,4 +1,4 @@
-import formatDistanceStrict from "date-fns/formatDistanceStrict";
+import { formatDistanceStrict, parseISO, differenceInSeconds } from 'date-fns';
 import Image from "next/future/image";
 import { useEffect, useState } from "preact/hooks";
 import { Activity, useLanyard } from "react-use-lanyard";
