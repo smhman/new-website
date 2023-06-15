@@ -72,16 +72,6 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@marsidev/react-turnstile@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "@marsidev/react-turnstile@npm:0.2.1"
-  peerDependencies:
-    react: ">=16.8.0"
-    react-dom: ">=16.8.0"
-  checksum: 9d50b3dc131b0ac2979bfa0f6515e0a15cfc532e9fe6e6ff5136ca3502de27e28810f43febf5f6c77e97a104c21ad41aed56a51d223cdb78a1f29718465c3eb2
-  languageName: node
-  linkType: hard
-
 "@next/bundle-analyzer@^12.2.1":
   version "12.2.1"
   resolved "https://registry.yarnpkg.com/@next/bundle-analyzer/-/bundle-analyzer-12.2.1.tgz#9b15f487496aa1e137f640c5906e84a5daca6ebc"
