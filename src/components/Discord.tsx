@@ -113,41 +113,44 @@ interface OtherActivitiesProps {
 
 function OtherActivities({ activities }: OtherActivitiesProps) {
 	const [now, setNow] = useState(new Date());
-
+  
 	useEffect(() => {
-		const interval = setInterval(() => {
-			setNow(new Date());
-		}, 1000);
-
-		return () => clearInterval(interval);
+	  const interval = setInterval(() => {
+		setNow(new Date());
+	  }, 1000);
+  
+	  return () => clearInterval(interval);
 	}, []);
-
+  
 	return (
-		<>
-			{activities?.map(activity => (
-				<p key={activity.id} className="flex-grow">
-					<span className="opacity-80">
-						{getActivityType(activity.type)}
-					</span>{" "}
-					{activity.name}{" "}
-					<span className="opacity-80">
-						for{" "}
-						{formatDistanceStrict(
-							now,
-							activity.timestamps?.start ?? activity.created_at
-						)}
-					</span>
-					<span className="opacity-80">
-					{"\n"}{activity.details} | {activity.state}
-					</span>{" "}
-					<span className="opacity-80">
-          				{formatDistanceStrict(
-           					activity.timestamps?.end ?? now,
-            				now
-          				)}
-        			</span>
-				</p>
-			))}
-		</>
+	  <>
+		{activities?.map(activity => {
+		  const startTimestamp = activity.timestamps?.start ?? activity.created_at;
+		  const endTimestamp = activity.timestamps?.end ?? now;
+		  const start = parseISO(startTimestamp);
+		  const end = parseISO(endTimestamp);
+		  const timeElapsed = differenceInSeconds(now, start);
+		  const timeLeft = differenceInSeconds(end, now);
+  
+		  return (
+			<p key={activity.id} className="flex-grow">
+			  <span className="opacity-80">
+				{getActivityType(activity.type)}
+			  </span>{" "}
+			  {activity.name}{" "}
+			  <span className="opacity-80">
+				for{" "}
+				{formatDistanceStrict(start, now)}
+			  </span>
+			  <span className="opacity-80">
+				{"\n"}{activity.details} | {activity.state}
+			  </span>{" "}
+			  <span className="opacity-80">
+				{formatDistanceStrict(now, end)} left.
+			  </span>
+			</p>
+		  );
+		})}
+	  </>
 	);
 }
