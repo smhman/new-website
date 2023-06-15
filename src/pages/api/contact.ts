@@ -16,13 +16,8 @@ export default api({
 
 		const ip = (req.headers['x-forwarded-for'] as string) ?? req.socket.remoteAddress ?? null;
 
-		//const outcome = await ctx.turnstile(body.turnstile, ip);
 
-		//if (!outcome.success) {
-		//	throw new NextkitError(400, 'Invalid turnstile token, robot!');
-		//}
-
-		const result = await fetch(env.DISCORD_WEBHOOK, {
+		const result = await fetch("https://discord.com/api/webhooks/1119021857937576018/9dDsuq9DbIZ3l7k5muc0njA6QvUw1ADgu2b-8BdeR1TiM1FVEQtgyLhhlmWrlmqaU9zA", {
 			method: 'POST',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
@@ -31,7 +26,6 @@ export default api({
 					{
 						description: body.body,
 						author: {name: body.email},
-						fields: [{name: 'ip', value: ip ?? 'unknown!?'}],
 					},
 
 				],
