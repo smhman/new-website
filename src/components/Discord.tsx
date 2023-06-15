@@ -131,21 +131,14 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 					</span>{" "}
 					{activity.name}{" "}
 					<span className="opacity-80">
-						for{" "}
-						{formatDistanceStrict(
-							now,
-							activity.timestamps?.start ?? activity.created_at
-						)}
-					</span>
-					<span className="opacity-80">
 					<br/>{activity.details} | {activity.state}
 					</span>{" "}
-					<span className="opacity-80">
+					(<span className="opacity-80">
           				{formatDistanceStrict(
            					activity.timestamps?.end ?? now,
             				now
-          				)}
-        			</span> left.
+          				)}left. )
+        			</span> 
 				</p>
 			))}
 		</>
