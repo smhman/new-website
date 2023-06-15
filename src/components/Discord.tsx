@@ -138,7 +138,7 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 						)}
 					</span>
 					<span className="opacity-80">
-						\n{activity.details} | {activity.state}
+					{"\n"}{activity.details} | {activity.state}
 					</span>
 				</p>
 			))}
