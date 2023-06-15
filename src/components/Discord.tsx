@@ -122,10 +122,6 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
   
 	  return () => clearInterval(interval);
 	}, []);
-	const endTimestamp = activities?.map(activity.timestamps?.end ?? now);
-	const durationInSeconds = differenceInSeconds(now, endTimestamp);
-	const minutes = Math.floor(durationInSeconds / 60);
-	const seconds = durationInSeconds % 60;
 	return (
 		<>
 			{activities?.map(activity => (
@@ -138,7 +134,13 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 					<br/>{activity.details} | {activity.state}
 					</span>{" "}
 					(<span className="opacity-80">
-  						{`${minutes} minutes ${seconds} seconds`} left
+  					{(() => {
+    					const endTimestamp = activity.timestamps?.end ?? now;
+    					const durationInSeconds = differenceInSeconds(now, endTimestamp);
+    					const minutes = Math.floor(durationInSeconds / 60);
+    					const seconds = durationInSeconds % 60;
+    					return `${minutes} minutes ${seconds} seconds`;
+  					})()} left
 					</span>)
 				</p>
 			))}
