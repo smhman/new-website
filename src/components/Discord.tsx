@@ -137,7 +137,7 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
           				{formatDistanceStrict(
            					activity.timestamps?.end ?? now,
             				now
-          				)}left)
+          				)} left)
         			</span> 
 				</p>
 			))}
