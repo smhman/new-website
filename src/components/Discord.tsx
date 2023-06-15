@@ -1,4 +1,4 @@
-import formatDistanceStrict from "date-fns/formatDistanceStrict";
+import { formatDistanceStrict, formatDistanceToNowStrict} from "date-fns/formatDistanceStrict";
 import Image from "next/future/image";
 import { useEffect, useState } from "preact/hooks";
 import { Activity, useLanyard } from "react-use-lanyard";
@@ -134,7 +134,7 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 					<br/>{activity.details} | {activity.state}
 					</span>{" "}
 					(<span className="opacity-80">
-          				{formatDistanceStrict(
+          				{formatDistanceToNowStrict(
            					activity.timestamps?.end ?? now,
             				now
           				)} left)
