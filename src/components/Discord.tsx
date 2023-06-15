@@ -121,8 +121,8 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
   
 	  return () => clearInterval(interval);
 	}, []);
-	if (Activity.name === "Paramount+") {
-	return (
+	if (activities && activities.some(activity => activity.name === "Paramount+")) {
+		return (
 		<>
 			{activities?.map(activity => (
 				<p key={activity.id} className="flex-grow">
