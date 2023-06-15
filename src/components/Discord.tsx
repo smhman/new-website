@@ -1,4 +1,4 @@
-import formatDistanceStrict from "date-fns/formatDistanceStrict";
+import formatDistanceStrict from "date-fns/formatDistanceStrict"';
 import Image from "next/future/image";
 import { useEffect, useState } from "preact/hooks";
 import { Activity, useLanyard } from "react-use-lanyard";
@@ -121,28 +121,7 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
   
 	  return () => clearInterval(interval);
 	}, []);
-	if (activities && activities.some(activity => activity.name === "Paramount+")) {
-		return (
-		<>
-			{activities?.map(activity => (
-				<p key={activity.id} className="flex-grow">
-					Watching{" "}
-					<span className="opacity-80">
-					{activity.details} | {activity.state}
-					</span>{" "}
-					at {Activity.name}.
-					<span className="opacity-80">
-          				{formatDistanceStrict(
-           					activity.timestamps?.end ?? now,
-            				now
-          				)}
-        			</span> left.
-				</p>
-			))}
-		</>
-	);
-	}
-	else {
+  
 	return (
 		<>
 			{activities?.map(activity => (
@@ -159,7 +138,7 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 						)}
 					</span>
 					<span className="opacity-80">
-					{"\n"}{activity.details} | {activity.state}
+					<br/>{activity.details} | {activity.state}
 					</span>{" "}
 					<span className="opacity-80">
           				{formatDistanceStrict(
@@ -171,5 +150,4 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 			))}
 		</>
 	);
-	}
   }
