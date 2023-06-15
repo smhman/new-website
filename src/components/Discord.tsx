@@ -1,4 +1,4 @@
-import { formatDistanceStrict, formatDistanceToNowStrict} from "date-fns";
+import formatDistanceStrict from "date-fns/formatDistanceStrict";
 import Image from "next/future/image";
 import { useEffect, useState } from "preact/hooks";
 import { Activity, useLanyard } from "react-use-lanyard";
@@ -22,18 +22,7 @@ const getStatusColor = (
 
 	return str;
 };
-const formatter = new Intl.DateTimeFormat("en-US", {
-	day: "numeric",
-	weekday: "long",
-	year: "numeric",
-	month: "long",
-	hour: "numeric",
-	minute: "numeric",
-	second: "numeric",
-	hour12: false,
-	timeZone: "Europe/Tallinn",
-	timeZoneName: "short"
-});
+
 const capitalize = (str: string) => {
 	return str[0].toUpperCase() + str.slice(1);
 };
@@ -145,11 +134,12 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 					<br/>{activity.details} | {activity.state}
 					</span>{" "}
 					(<span className="opacity-80">
-					{formatDistanceToNowStrict(
-  						new Date(formatter.format(activity.timestamps?.end ?? now).replace(" at", " ·")),
- 				 		now
-					)} left)
-        			</span> 
+  						{formatDistanceStrict(
+    					activity.timestamps?.end ?? now,
+    					now,
+    					{ unit: 'minute', format: 'short' }
+  					)} left
+					</span>) 
 				</p>
 			))}
 		</>
