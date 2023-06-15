@@ -126,9 +126,9 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 	  <>
 		{activities?.map(activity => {
 		  const startTimestamp = activity.timestamps?.start ?? activity.created_at;
-		  const endTimestamp = activity.timestamps?.end ?? now;
-		  const start = parseISO(startTimestamp);
-		  const end = parseISO(endTimestamp);
+		  const endTimestamp = activity.timestamps?.end ?? now.toString();
+		  const start = parseISO(String(startTimestamp));
+		  const end = parseISO(String(endTimestamp));
 		  const timeElapsed = differenceInSeconds(now, start);
 		  const timeLeft = differenceInSeconds(end, now);
   
@@ -153,4 +153,4 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 		})}
 	  </>
 	);
-}
+  }
