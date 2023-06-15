@@ -121,7 +121,7 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
   
 	  return () => clearInterval(interval);
 	}, []);
-	if (Activity.name="Paramount+") {
+	if (Activity.name === "Paramount+") {
 	return (
 		<>
 			{activities?.map(activity => (
