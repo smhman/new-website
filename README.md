@@ -1,3 +1,3 @@
-# dan.onl
+# website
 
-This is my personal website, written with Next.js, TypeScript, and TailwindCSS (totally not the 4th time I've rewritten it).
+This is my personal website based on dan.onl, written with Next.js, TypeScript, and TailwindCSS.
