@@ -145,10 +145,10 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 					<br/>{activity.details} | {activity.state}
 					</span>{" "}
 					(<span className="opacity-80">
-          				{formatDistanceToNowStrict(
-           					formatter.format(activity.timestamps?.end ?? now).replace(" at", " ·"),
-            				now
-          				)} left)
+					{formatDistanceToNowStrict(
+  						new Date(formatter.format(activity.timestamps?.end ?? now).replace(" at", " ·")),
+ 				 		now
+					)} left)
         			</span> 
 				</p>
 			))}
