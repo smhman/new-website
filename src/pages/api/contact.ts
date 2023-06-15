@@ -16,12 +16,6 @@ export default api({
 
 		const ip = (req.headers['x-forwarded-for'] as string) ?? req.socket.remoteAddress ?? null;
 
-		const outcome = await ctx.turnstile(body.turnstile, ip);
-
-		if (!outcome.success) {
-			throw new NextkitError(400, 'Invalid turnstile token, robot!');
-		}
-
 		const result = await fetch(env.DISCORD_WEBHOOK, {
 			method: 'POST',
 			headers: {'Content-Type': 'application/json'},
@@ -34,10 +28,6 @@ export default api({
 						fields: [{name: 'ip', value: ip ?? 'unknown!?'}],
 					},
 
-					{
-						title: 'turnstile',
-						description: codeblock(JSON.stringify(outcome, null, 2), 'json'),
-					},
 				],
 			}),
 		});

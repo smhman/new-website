@@ -55,7 +55,7 @@ export function ContactForm() {
 				className="space-y-2 [&>label]:block [&_input]:rounded-md [&_textarea]:rounded-md"
 			>
 				<label htmlFor="email">
-					<input type="email" name="email" id="email" required placeholder="hi@sundei.de" className="w-full" />
+					<input type="email" name="email" id="email" required placeholder="hi@sundei.eu" className="w-full" />
 				</label>
 
 				<label htmlFor="body">
