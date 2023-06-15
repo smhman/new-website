@@ -121,7 +121,28 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
   
 	  return () => clearInterval(interval);
 	}, []);
-  
+	if (Activity.name="Paramount+") {
+	return (
+		<>
+			{activities?.map(activity => (
+				<p key={activity.id} className="flex-grow">
+					Watching{" "}
+					<span className="opacity-80">
+					{activity.details} | {activity.state}
+					</span>{" "}
+					at {Activity.name}.
+					<span className="opacity-80">
+          				{formatDistanceStrict(
+           					activity.timestamps?.end ?? now,
+            				now
+          				)}
+        			</span> left.
+				</p>
+			))}
+		</>
+	);
+	}
+	else {
 	return (
 		<>
 			{activities?.map(activity => (
@@ -150,4 +171,5 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 			))}
 		</>
 	);
+	}
   }
