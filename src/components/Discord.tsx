@@ -1,5 +1,5 @@
 import formatDistanceStrict from "date-fns/formatDistanceStrict";
-import { formatDuration } from 'date-fns';
+import { differenceInSeconds } from 'date-fns';
 import Image from "next/future/image";
 import { useEffect, useState } from "preact/hooks";
 import { Activity, useLanyard } from "react-use-lanyard";
@@ -122,10 +122,14 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
   
 	  return () => clearInterval(interval);
 	}, []);
-  
+
 	return (
 		<>
 			{activities?.map(activity => (
+				const endTimestamp = activity.timestamps?.end ?? now;
+				const durationInSeconds = differenceInSeconds(now, endTimestamp);
+				const minutes = Math.floor(durationInSeconds / 60);
+				const seconds = durationInSeconds % 60;
 				<p key={activity.id} className="flex-grow">
 					<span className="opacity-80">
 						{getActivityType(activity.type)}
@@ -135,11 +139,7 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 					<br/>{activity.details} | {activity.state}
 					</span>{" "}
 					(<span className="opacity-80">
-  					{formatDuration({
-    					start: activity.timestamps?.end ?? now,
-    					end: now,
-    					format: ['minutes', 'seconds']
-  					})} left
+  						{`${minutes} minutes ${seconds} seconds`} left
 					</span>)
 				</p>
 			))}
