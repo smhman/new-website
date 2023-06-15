@@ -123,34 +123,31 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 	}, []);
   
 	return (
-	  <>
-		{activities?.map(activity => {
-		  const startTimestamp = activity.timestamps?.start ?? activity.created_at;
-		  const endTimestamp = activity.timestamps?.end ?? now.toString();
-		  const start = parseISO(String(startTimestamp));
-		  const end = parseISO(String(endTimestamp));
-		  const timeElapsed = differenceInSeconds(now, start);
-		  const timeLeft = differenceInSeconds(end, now);
-  
-		  return (
-			<p key={activity.id} className="flex-grow">
-			  <span className="opacity-80">
-				{getActivityType(activity.type)}
-			  </span>{" "}
-			  {activity.name}{" "}
-			  <span className="opacity-80">
-				for{" "}
-				{formatDistanceStrict(start, now)}
-			  </span>
-			  <span className="opacity-80">
-				{"\n"}{activity.details} | {activity.state}
-			  </span>{" "}
-			  <span className="opacity-80">
-				{formatDistanceStrict(now, end)} left.
-			  </span>
-			</p>
-		  );
-		})}
-	  </>
+		<>
+			{activities?.map(activity => (
+				<p key={activity.id} className="flex-grow">
+					<span className="opacity-80">
+						{getActivityType(activity.type)}
+					</span>{" "}
+					{activity.name}{" "}
+					<span className="opacity-80">
+						for{" "}
+						{formatDistanceStrict(
+							now,
+							activity.timestamps?.start ?? activity.created_at
+						)}
+					</span>
+					<span className="opacity-80">
+					{"\n"}{activity.details} | {activity.state}
+					</span>{" "}
+					<span className="opacity-80">
+          				{formatDistanceStrict(
+           					activity.timestamps?.end ?? now,
+            				now
+          				)}
+        			</span> left.
+				</p>
+			))}
+		</>
 	);
   }
