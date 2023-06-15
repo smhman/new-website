@@ -31,63 +31,21 @@ export const anime: AnimeInfo[] = [
 		url: "https://www.paramountplus.com/shows/big-time-rush/"
 	},
 	{
-		name: "Komi Can't Communicate",
-		description: "",
-		image: "/images/anime/komi.jpg",
-		url: "https://anilist.co/anime/133965/Komisan-wa-Komyushou-desu/"
+		name: "iCarly (2021 Reboot)",
+		description: "The iCarly reboot returns with a fresh twist as Carly, Spencer, and Freddie tackle adulthood, technology, and comedic mishaps while reviving their web show for a new generation of fans.",
+		image: "/images/tvshows/icarly-2021.jpg",
+		url: "https://www.paramountplus.com/shows/icarly-2021/"
 	},
 	{
-		name: "Saiki K.",
-		description: "The world's unhappiest man.",
-		image: "/images/anime/saiki.jpg",
-		url: "https://anilist.co/anime/21804/Saiki-Kusuo-no-nan/"
+		name: "Wednesday",
+		description: "\"Wednesday\" is a dark and quirky coming-of-age series following the adventures of the iconic character Wednesday Addams as she uncovers family secrets at a mysterious boarding school.",
+		image: "/images/tvshows/wednesday.jpg",
+		url: "https://www.netflix.com/title/81231974"
 	},
 	{
-		name: "Kakegurui",
-		description: "Gambling addict.",
-		image: "/images/anime/yumeko.jpg",
-		url: "https://anilist.co/anime/98314/Kakegurui/"
-	},
-	{
-		name: "Neon Genesis Evangelion",
-		description: "Mental illness.",
-		image: "/images/anime/nge.jpg",
-		url: "https://anilist.co/anime/30/Shin-Seiki-Evangelion/"
-	},
-	{
-		name: "Assassination Classroom",
-		description: "Koro-sensei!",
-		image: "/images/anime/classroom.jpg",
-		url: "https://anilist.co/anime/20755/Ansatsu-Kyoushitsu"
-	},
-	{
-		name: "Hunter x Hunter",
-		description: "Psychological horror.",
-		image: "/images/anime/hxh.jpg",
-		url: "https://anilist.co/anime/11061/HUNTERHUNTER-2011/"
-	},
-	{
-		name: "Aggretsuko",
-		description: "Corporate slave.",
-		image: "/images/anime/retsuko.jpg",
-		url: "https://anilist.co/anime/101571/Aggressive-Retsuko/"
-	},
-	{
-		name: "Brand New Animal",
-		description: "Animal racism.",
-		image: "/images/anime/bna.jpg",
-		url: "https://anilist.co/anime/110354/BNA/"
-	},
-	{
-		name: "Rascal Does Not Dream",
-		description: "Puberty syndrome?",
-		image: "/images/anime/mai.jpg",
-		url: "https://anilist.co/anime/101291/Rascal-Does-Not-Dream-of-Bunny-Girl-Senpai/"
-	},
-	{
-		name: "Beastars",
-		description: "Carnivores.",
-		image: "/images/anime/beastars.png",
-		url: "https://anilist.co/anime/107660/BEASTARS/"
+		name: "The Office (US)",
+		description: "\"The Office\" (US) is a beloved mockumentary sitcom that humorously follows the eccentric employees of Dunder Mifflin Scranton, capturing workplace absurdity with heart and relatability.		",
+		image: "/images/tvshows/theoffice.jpg",
+		url: "https://www.peacocktv.com/stream-tv/the-office"
 	}
 ];

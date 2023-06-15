@@ -37,29 +37,10 @@ export const skills: SkillInfo[] = [
 		bg: "#3076bd"
 	},
 	{
-		name: "Rust",
-		icon: "rust",
-		href: "https://www.rust-lang.org/",
-		bg: "#d73c22"
-	},
-
-	{
-		name: "MongoDB",
-		icon: "mongodb",
-		href: "https://www.mongodb.com/",
-		bg: "#0f3430"
-	},
-	{
 		name: "Discord API",
 		icon: "bots",
 		href: "https://discord.com/developers/docs/",
 		bg: "#5663e9"
-	},
-	{
-		name: "Docker",
-		icon: "docker",
-		href: "https://www.docker.com/",
-		bg: "#4793eb"
 	},
 	{
 		name: "Node.js",
@@ -67,19 +48,9 @@ export const skills: SkillInfo[] = [
 		href: "https://nodejs.org/en/"
 	},
 	{
-		name: "GitHub",
-		icon: "github",
-		href: "https://github.com/"
-	},
-	{
 		name: "Python",
 		icon: "python",
 		href: "https://www.python.org/"
-	},
-	{
-		name: "Linux Systems",
-		icon: "linux",
-		href: "https://www.linux.org/"
 	},
 	{
 		name: "Tailwind CSS",
@@ -90,10 +61,5 @@ export const skills: SkillInfo[] = [
 		name: "Next.js",
 		icon: "nextjs",
 		href: "https://nextjs.org/"
-	},
-	{
-		name: "React",
-		icon: "react",
-		href: "https://reactjs.org/"
 	}
 ];
