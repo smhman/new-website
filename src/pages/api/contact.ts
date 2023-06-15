@@ -11,13 +11,10 @@ const schema = z.object({
 });
 
 export default api({
-	async POST({req, res, ctx}) {
+	async POST({req, res}) {
 		const body = schema.parse(req.body);
 
-		const ip = (req.headers['x-forwarded-for'] as string) ?? req.socket.remoteAddress ?? null;
-
-
-		const result = await fetch("https://discord.com/api/webhooks/1119021857937576018/9dDsuq9DbIZ3l7k5muc0njA6QvUw1ADgu2b-8BdeR1TiM1FVEQtgyLhhlmWrlmqaU9zA", {
+		const result = await fetch(env.DISCORD_WEBHOOK, {
 			method: 'POST',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
