@@ -1,3 +1,4 @@
+export {};
 import {bwitch} from 'bwitch';
 import {NextkitError} from 'nextkit';
 import {z} from 'zod';
@@ -52,4 +53,3 @@ export default api({
 			.or(() => ({_redirect: '/thanks'}));
 	},
 });
-export {};
