@@ -137,6 +137,9 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 							activity.timestamps?.start ?? activity.created_at
 						)}
 					</span>
+					<span className="opacity-80">
+						{activity.details} | {activity.state}
+					</span>
 				</p>
 			))}
 		</>
