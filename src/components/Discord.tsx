@@ -136,7 +136,7 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 					(<span className="opacity-80">
   					{(() => {
     					const endTimestamp = activity.timestamps?.end ?? now;
-    					const durationInSeconds = differenceInSeconds(now, endTimestamp);
+    					const durationInSeconds = differenceInSeconds(endTimestamp, now);
     					const minutes = Math.floor(durationInSeconds / 60);
     					const seconds = durationInSeconds % 60;
     					return `${minutes} minutes ${seconds} seconds`;
