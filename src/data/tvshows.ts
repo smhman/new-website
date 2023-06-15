@@ -7,16 +7,16 @@ export interface AnimeInfo {
 
 export const anime: AnimeInfo[] = [
 	{
-		name: "Kaguya-sama: Love is War",
-		description: "",
-		image: "/images/anime/kaguya.png",
-		url: "https://anilist.co/anime/101921/Kaguyasama-wa-Kokurasetai-Tensaitachi-no-Renai-Zunousen/"
+		name: "iCarly",
+		description: "\"iCarly\" is a hit TV show where Carly, Sam, and Freddie create their own web series, entertaining audiences with their humor and talent.",
+		image: "/images/tvshows/ic_hp_hero_landscape.jpg",
+		url: "https://www.paramountplus.com/shows/icarly/"
 	},
 	{
-		name: "Mairimashita! Iruma-kun",
-		description: "Demon school!",
-		image: "/images/anime/demon.jpg",
-		url: "https://anilist.co/anime/107693/Mairimashita-Irumakun/"
+		name: "Victorious",
+		description: "\"Victorious\" is a popular TV show about Tori Vega's journey at a performing arts high school, where she discovers her musical talents amidst friendships and challenges.",
+		image: "/images/tvshows/vict_sp_hero_landscape.jpg",
+		url: "https://www.paramountplus.com/shows/victorious/"
 	},
 	{
 		name: "Tokyo Ghoul",
