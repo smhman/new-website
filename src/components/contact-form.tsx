@@ -62,12 +62,6 @@ export function ContactForm() {
 					<textarea id="body" name="body" rows={5} required placeholder="Your message" className="w-full resize-y" />
 				</label>
 
-				<Turnstile
-					options={{responseFieldName: 'turnstile'}}
-					style={{display: 'none'}}
-					siteKey="0x4AAAAAAAGLHj9Ell3-ACJDbgRU5_q1Xu4"
-				/>
-
 				<button
 					disabled={loading}
 					type="submit"
