@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<Head>
-				<title>Daniel</title>
+				<title>sundei</title>
 
 				<meta
 					name="viewport"
@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<script src="https://sundei.eu/assets/js/weather.js"></script>
 			</Head>
 			<Layout>
 				<Component {...pageProps} />
