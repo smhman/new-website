@@ -8,7 +8,6 @@ import Discord from "../components/Discord";
 import GenericMeta from "../components/GenericMeta";
 import Spotify from "../components/Spotify";
 import { socials } from "../data/socials";
-import {ContactForm} from '../components/contact-form';
 
 const birthday = new Date(2006, 6, 19);
 
@@ -63,16 +62,15 @@ export default function Home({
 			<p className="mb-4 text-base text-gray-300">
 				<Clock />
 			</p>
-
+			<p className="mb-4 text-base text-gray-300"><span id="weather"><i
+                className="fa-regular fa-spinner-third animate-spin text-gray-500 inline-flex ml-1 mr-2"></i>Loading</span>
+       		</p>
 			<hr className="mb-4 bg-slate-800 border-none h-0.5" />
 
 			<Discord />
 			<Spotify />
 			<br/>
 			<br/>
-			<div className="col-span-6 space-y-4 rounded-2xl bg-lime-400 p-6 text-black dark:bg-lime-500 md:col-span-6">
-				<ContactForm />
-			</div>
 		</>
 	);
 }
