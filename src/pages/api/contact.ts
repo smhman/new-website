@@ -1,4 +1,3 @@
-import {bwitch} from 'bwitch';
 import {NextkitError} from 'nextkit';
 import {z} from 'zod';
 import {api} from '../../server/api';
@@ -12,7 +11,7 @@ const schema = z.object({
 });
 
 export default api({
-	async POST({req}) {
+	async POST({req, res}) {
 		const body = schema.parse(req.body);
 
 		const ip = (req.headers['x-forwarded-for'] as string) ?? req.socket.remoteAddress ?? null;
@@ -38,11 +37,15 @@ export default api({
 		});
 
 		if (result.status >= 400) {
-			throw new NextkitError(result.status, 'Error sending notification');
+			res.throw(result.status, 'Error sending notification');
 		}
 
-		return bwitch(req.headers['content-type'])
-			.case('application/json', () => ({sent: true}))
-			.or(() => ({_redirect: '/thanks'}));
+		if (req.headers['content-type'] === 'application/json') {
+			return {sent: true};
+		}
+
+		return {
+			_redirect: '/thanks',
+		};
 	},
 });
