@@ -8,7 +8,6 @@ import Discord from "../components/Discord";
 import GenericMeta from "../components/GenericMeta";
 import Spotify from "../components/Spotify";
 import { socials } from "../data/socials";
-import {ContactForm} from '../components/contact-form';
 
 const birthday = new Date(2006, 6, 19);
 
@@ -70,9 +69,6 @@ export default function Home({
 			<Spotify />
 			<br/>
 			<br/>
-			<div className="col-span-6 space-y-4 rounded-2xl bg-lime-400 p-6 text-black dark:bg-lime-500 md:col-span-6">
-				<ContactForm />
-			</div>
 		</>
 	);
 }
