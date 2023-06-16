@@ -21,7 +21,7 @@ export default function Talk() {
 
 	return (
 		<div className="space-y-4">
-			<h1 className="text-2xl font-bold sm:text-3xl">Let's talk 💬</h1>
+			<h1 className="text-2xl font-bold sm:text-3xl">Let&apos;s talk 💬</h1>
 			<p>
 				Leave a message on the form below or get in touch through Discord,
 				Twitter or email.
