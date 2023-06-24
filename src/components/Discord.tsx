@@ -77,9 +77,6 @@ export default function Discord() {
 				<div>
 					<p>
 						{lanyard?.discord_user.username}
-						<span className="opacity-80">
-							#{lanyard?.discord_user.discriminator ?? "0000"}
-						</span>
 					</p>
 					<p>
 						{lanyard?.activities[0]?.type === 4
