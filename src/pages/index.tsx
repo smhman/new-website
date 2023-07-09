@@ -9,7 +9,7 @@ import GenericMeta from "../components/GenericMeta";
 import Spotify from "../components/Spotify";
 import { socials } from "../data/socials";
 
-const birthday = new Date(2006, 6, 19);
+const birthday = new Date(2006, 19, 6);
 
 export async function getStaticProps() {
 	return {
