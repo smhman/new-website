@@ -20,10 +20,10 @@ export interface ProjectInfo {
 
 export const projects: ProjectInfo[] = [
 	{
-		name: "GTOS",
+		name: "Crystal PS",
 		description:
-			"\"GTOS\" is a popular private server for the multiplayer sandbox game Growtopia. It offers an exclusive and customized gaming experience, providing players with unique features, events, and a vibrant community, enhancing the excitement and creativity of the Growtopia universe.",
-		image: "/images/projects/gtos.jpg",
+			"\"Crystal PS\" is a popular private server for the multiplayer sandbox game Growtopia. It offers an exclusive and customized gaming experience, providing players with unique features, events, and a vibrant community, enhancing the excitement and creativity of the Growtopia universe.",
+		image: "/images/projects/crystalps.gif",
 		url: "https://crystalps.eu",
 		stack: [
 			{
