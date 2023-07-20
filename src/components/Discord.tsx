@@ -78,21 +78,23 @@ export default function Discord() {
 					<p>
 						{lanyard?.discord_user.username}
 					</p>
-					<p>
-					{ lanyard?.activities[0]?.type === 4 && lanyard?.activities[0]?.emoji && (
-  <Image
-    src={`https://cdn.discordapp.com/emojis/${lanyard.activities[0].emoji.id}.webp?size=96&quality=lossless`}
-    alt="Discord Avatar"
-    width={96}
-    height={96}
-  />
-)}
+					<p style={{ display: 'flex', alignItems: 'center' }}>
+  {lanyard?.activities[0]?.type === 4 && lanyard?.activities[0]?.emoji && (
+    <Image
+      src={`https://cdn.discordapp.com/emojis/${lanyard.activities[0].emoji.id}.webp?size=96&quality=lossless`}
+      alt="rearea"
+      width={32}
+      height={32}
+    />
+  )}
 
+  {lanyard?.activities[0]?.type === 4 && lanyard?.activities[0]?.state && (
+    <span style={{ marginLeft: '8px' }}>
+      {lanyard.activities[0].state}
+    </span>
+  )}
+</p>
 
-						{lanyard?.activities[0]?.type === 4
-							? lanyard?.activities[0]?.state
-							: null}
-					</p>
 					<OtherActivities activities={otherActivities} />
 				</div>
 			) : (
