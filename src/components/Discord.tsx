@@ -85,10 +85,11 @@ export default function Discord() {
       ? `https://cdn.discordapp.com/emojis/${lanyard.activities[0].emoji.id}.webp?size=96&quality=lossless`
       : null
   }
-  alt="Emoji"
+  alt="afafafa"
   width={96}
   height={96}
 />
+
 						{lanyard?.activities[0]?.type === 4
 							? lanyard?.activities[0]?.state
 							: null}
