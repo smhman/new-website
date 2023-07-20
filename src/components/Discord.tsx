@@ -81,7 +81,11 @@ export default function Discord() {
 					<p style={{ display: 'flex', alignItems: 'center' }}>
   {lanyard?.activities[0]?.type === 4 && lanyard?.activities[0]?.emoji && (
     <Image
-      src={`https://cdn.discordapp.com/emojis/${lanyard.activities[0].emoji.id}.webp?size=96&quality=lossless`}
+      src={
+        lanyard.activities[0].emoji.animated
+          ? `https://cdn.discordapp.com/emojis/${lanyard.activities[0].emoji.id}.gif?size=96`
+          : `https://cdn.discordapp.com/emojis/${lanyard.activities[0].emoji.id}.webp?size=96&quality=lossless`
+      }
       alt="rearea"
       width={32}
       height={32}
