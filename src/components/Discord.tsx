@@ -80,14 +80,15 @@ export default function Discord() {
 					</p>
 					<p>
 					<Image
-						src={
-					`https://cdn.discordapp.com/emojis/${lanyard?.activities[0]?.type === 4
-							? lanyard?.activities[0]?.emoji.id
-							: null}.webp?size=96&quality=lossless`}
-							alt="Discord Avatar"
-						width={96}
-						height={96}
-						/> 
+  src={
+    lanyard?.activities[0]?.type === 4 && lanyard?.activities[0]?.emoji
+      ? `https://cdn.discordapp.com/emojis/${lanyard.activities[0].emoji.id}.webp?size=96&quality=lossless`
+      : null
+  }
+  alt="Emoji"
+  width={96}
+  height={96}
+/>
 						{lanyard?.activities[0]?.type === 4
 							? lanyard?.activities[0]?.state
 							: null}
