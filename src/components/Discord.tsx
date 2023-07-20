@@ -79,6 +79,15 @@ export default function Discord() {
 						{lanyard?.discord_user.username}
 					</p>
 					<p>
+					<Image
+						src={
+					`https://cdn.discordapp.com/emojis/${lanyard?.activities[0]?.type === 4
+							? lanyard?.activities[0]?.emoji.id
+							: null}.webp?size=96&quality=lossless`}
+							alt="Discord Avatar"
+						width={96}
+						height={96}
+						/> 
 						{lanyard?.activities[0]?.type === 4
 							? lanyard?.activities[0]?.state
 							: null}
