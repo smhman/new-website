@@ -154,17 +154,17 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 				  const durationInSeconds = differenceInSeconds(endTimestamp, now);
 				  const minutes = Math.floor(durationInSeconds / 60);
 				  const seconds = durationInSeconds % 60;
-				  return `${minutes} minutes ${seconds} seconds`;
+				  return `${minutes} minutes ${seconds} seconds left`;
 				} else if (activity.created_at) {
 				  const createdAtTimestamp = activity.created_at;
 				  const elapsedInSeconds = differenceInSeconds(now, createdAtTimestamp);
 				  const elapsedMinutes = Math.floor(elapsedInSeconds / 60);
 				  const elapsedSeconds = elapsedInSeconds % 60;
-				  return `${elapsedMinutes} minutes ${elapsedSeconds} seconds ago`;
+				  return `${elapsedMinutes} minutes ${elapsedSeconds} seconds elapsed`;
 				} else {
 				  return "No time information available.";
 				}
-			  })()} left
+			  })()}
 			</span>)
 		  </p>
 		))}
