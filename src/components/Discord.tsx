@@ -135,28 +135,40 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
   
 	  return () => clearInterval(interval);
 	}, []);
+  
 	return (
-		<>
-			{activities?.map(activity => (
-				<p key={activity.id} className="flex-grow">
-					<span className="opacity-80">
-						{getActivityType(activity.type)}
-					</span>{" "}
-					{activity.name}{" "}
-					<span className="opacity-80">
-					<br/>{activity.details} | {activity.state}
-					</span>{" "}
-					(<span className="opacity-80">
-  					{(() => {
-    					const endTimestamp = activity.timestamps?.end ?? now;
-    					const durationInSeconds = differenceInSeconds(endTimestamp, now);
-    					const minutes = Math.floor(durationInSeconds / 60);
-    					const seconds = durationInSeconds % 60;
-    					return `${minutes} minutes ${seconds} seconds`;
-  					})()} left
-					</span>)
-				</p>
-			))}
-		</>
+	  <>
+		{activities?.map(activity => (
+		  <p key={activity.id} className="flex-grow">
+			<span className="opacity-80">
+			  {getActivityType(activity.type)}
+			</span>{" "}
+			{activity.name}{" "}
+			<span className="opacity-80">
+			  <br/>{activity.details} | {activity.state}
+			</span>{" "}
+			(<span className="opacity-80">
+			  {(() => {
+				if (activity.timestamps?.end) {
+				  const endTimestamp = activity.timestamps.end;
+				  const durationInSeconds = differenceInSeconds(endTimestamp, now);
+				  const minutes = Math.floor(durationInSeconds / 60);
+				  const seconds = durationInSeconds % 60;
+				  return `${minutes} minutes ${seconds} seconds`;
+				} else if (activity.created_at) {
+				  const createdAtTimestamp = activity.created_at;
+				  const elapsedInSeconds = differenceInSeconds(now, createdAtTimestamp);
+				  const elapsedMinutes = Math.floor(elapsedInSeconds / 60);
+				  const elapsedSeconds = elapsedInSeconds % 60;
+				  return `${elapsedMinutes} minutes ${elapsedSeconds} seconds ago`;
+				} else {
+				  return "No time information available.";
+				}
+			  })()} left
+			</span>)
+		  </p>
+		))}
+	  </>
 	);
   }
+  
