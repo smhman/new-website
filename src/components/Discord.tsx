@@ -136,7 +136,7 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
   
 	  return () => clearInterval(interval);
 	}, []);
-  
+	
 	return (
 	  <>
 		{activities?.map(activity => (
@@ -147,8 +147,8 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 			{activity.name}{" "}
 			{activity.details && activity.state && (
   <span className="opacity-80">
-    <br/>
-    {transliterate(activity.details, { to: "en" })} | {transliterate(activity.state, { to: "en" })}
+    <br />
+    {transliterate(activity.details, { to: 'en' })} | {transliterate(activity.state, { to: 'en' })}
   </span>
 )}{" "}
 			<br/>
