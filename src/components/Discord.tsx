@@ -3,7 +3,7 @@ import { differenceInSeconds } from 'date-fns';
 import Image from "next/future/image";
 import { useEffect, useState } from "preact/hooks";
 import { Activity, useLanyard } from "react-use-lanyard";
-import {transliterate} from 'transliteration';
+import { transliterate as tr, OptionsTransliterate } from 'transliteration'; // Import OptionsTransliterate
 
 const USER_ID = "1113690068113170484";
 
@@ -146,10 +146,10 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 			</span>{" "}
 			{activity.name}{" "}
 			{activity.details && activity.state && (
-  <span className="opacity-80">
-    <br />
-    {transliterate(activity.details, { to: 'en' })} | {transliterate(activity.state, { to: 'en' })}
-  </span>
+            <span className="opacity-80">
+			<br />
+			{tr(activity.details, { to: 'en' as OptionsTransliterate })} | {tr(activity.state, { to: 'en' as OptionsTransliterate })}
+		  </span>
 )}{" "}
 			<br/>
 <span className="opacity-80"> 
