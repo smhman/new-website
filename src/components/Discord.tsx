@@ -151,7 +151,7 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
   </span>
 )}{" "}
 			<br/>(<span className="opacity-80">
-  
+  <br/>
   {(() => {
     if (activity.timestamps?.end) {
       const endTimestamp = activity.timestamps.end;
@@ -159,15 +159,12 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 
       if (durationInSeconds >= 86400) { // More than 24 hours
         const days = Math.floor(durationInSeconds / 86400);
-        return `${days} days left`;
-      } else if (durationInSeconds >= 3600) { // More than 60 minutes
+        return `${days} days`;
+      } else {
         const hours = Math.floor(durationInSeconds / 3600);
         const minutes = Math.floor((durationInSeconds % 3600) / 60);
-        return `${hours}:${minutes.toString().padStart(2, '0')} left`;
-      } else {
-        const minutes = Math.floor(durationInSeconds / 60);
         const seconds = durationInSeconds % 60;
-        return `${minutes}:${seconds.toString().padStart(2, '0')} left`;
+        return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} left`;
       }
     } else if (activity.created_at) {
       const createdAtTimestamp = activity.created_at;
@@ -175,15 +172,12 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 
       if (elapsedInSeconds >= 86400) { // More than 24 hours
         const days = Math.floor(elapsedInSeconds / 86400);
-        return `${days} days elapsed`;
-      } else if (elapsedInSeconds >= 3600) { // More than 60 minutes
+        return `${days} days`;
+      } else {
         const hours = Math.floor(elapsedInSeconds / 3600);
         const minutes = Math.floor((elapsedInSeconds % 3600) / 60);
-        return `${hours}:${minutes.toString().padStart(2, '0')} elapsed`;
-      } else {
-        const elapsedMinutes = Math.floor(elapsedInSeconds / 60);
-        const elapsedSeconds = elapsedInSeconds % 60;
-        return `${elapsedMinutes}:${elapsedSeconds.toString().padStart(2, '0')} elapsed`;
+        const seconds = elapsedInSeconds % 60;
+        return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} elapsed`;
       }
     } else {
       return "No time information available.";
