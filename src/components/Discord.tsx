@@ -150,7 +150,7 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
     {activity.details} | {activity.state}
   </span>
 )}{" "}
-			<br/>(<span className="opacity-80">
+			<br/><span className="opacity-80">
   <br/>
   {(() => {
     if (activity.timestamps?.end) {
@@ -183,7 +183,7 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
       return "No time information available.";
     }
   })()}
-</span>)
+</span>
 		  </p>
 		))}
 	  </>
