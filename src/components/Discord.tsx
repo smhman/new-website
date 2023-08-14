@@ -152,7 +152,6 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 )}{" "}
 			<br/>
 <span className="opacity-80">
-  <br/>
   {(() => {
     if (activity.timestamps?.end) {
       const endTimestamp = activity.timestamps.end;
