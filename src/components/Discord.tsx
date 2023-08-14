@@ -148,7 +148,7 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 			{activity.details && activity.state && (
         <span className="opacity-80">
 		<br />
-		{tr(activity.details)} | {tr(activity.state)}
+		{activity.details} | {activity.state}
 		</span>
 )}{" "}
 			<br/>
