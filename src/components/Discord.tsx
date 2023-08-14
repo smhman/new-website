@@ -3,7 +3,7 @@ import { differenceInSeconds } from 'date-fns';
 import Image from "next/future/image";
 import { useEffect, useState } from "preact/hooks";
 import { Activity, useLanyard } from "react-use-lanyard";
-import {transliteration} from 'transliteration-browser';
+import {transliteration} from 'transliteration';
 
 const USER_ID = "1113690068113170484";
 
