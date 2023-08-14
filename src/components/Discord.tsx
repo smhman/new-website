@@ -146,10 +146,10 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 			</span>{" "}
 			{activity.name}{" "}
 			{activity.details && activity.state && (
-            <span className="opacity-80">
-			<br />
-			{tr(activity.details, { to: 'en' as OptionsTransliterate })} | {tr(activity.state, { to: 'en' as OptionsTransliterate })}
-		  </span>
+        <span className="opacity-80">
+		<br />
+		{tr(activity.details)} | {tr(activity.state)}
+		</span>
 )}{" "}
 			<br/>
 <span className="opacity-80"> 
