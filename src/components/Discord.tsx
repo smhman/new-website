@@ -148,7 +148,7 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 			{activity.details && activity.state && (
   <span className="opacity-80">
     <br/>
-    {transliterate.transliterate(activity.details, { to: "en" })} | {transliterate.transliterate(activity.state, { to: "en" })}
+    {transliterate(activity.details, { to: "en" })} | {transliterate(activity.state, { to: "en" })}
   </span>
 )}{" "}
 			<br/>
