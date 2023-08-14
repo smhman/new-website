@@ -144,9 +144,10 @@ function OtherActivities({ activities }: OtherActivitiesProps) {
 			  {getActivityType(activity.type)}
 			</span>{" "}
 			{activity.name}{" "}
-			<span className="opacity-80">
-			  <br/>{activity.details} | {activity.state}
-			</span>{" "}
+<span className="opacity-80">
+  <br/>
+  {activity.state === "" ? activity.details : `${activity.details} | ${activity.state}`}
+</span>
 			(<span className="opacity-80">
   {(() => {
     if (activity.timestamps?.end) {
