@@ -44,7 +44,7 @@ export const projects: ProjectInfo[] = [
 		name: "Online Radio Player",
 		description:
 			"This is a very small project. It has no purpose at all",
-		image: "https://tenor.com/view/estonia-eesti-laul-eurovision-eurovision-2023-alika-gif-14662379020582451872",
+		image: "/images/projects/alika.gif",
 		url: "https://raadio.sundei.eu",
 		stack: [
 			{
