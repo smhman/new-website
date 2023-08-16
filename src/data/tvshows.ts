@@ -20,7 +20,7 @@ export const anime: AnimeInfo[] = [
 	},
 	{
 		name: "Евровидение 2023: Мосты в Ливерпуль (Eurovision 2023: Bridges to Liverpool)",
-		description: "This captivating documentary follows the remarkable journey of Alika Milova, the esteemed Estonian Representative of Eurovision 2023, as she embarks on an inspiring quest towards the highly anticipated Eurovision 2023 Grand Final. Delve into the depths of her story as she navigates challenges, embraces her unique musicality, and strives for excellence on the grand stage of Eurovision.",
+		description: "Embark on a compelling journey with Alika Milova, the Estonian Representative of Eurovision 2023, as she vies for glory in the Eurovision 2023 Grand Final. Experience her path to the pinnacle of musical achievement in this captivating documentary.",
 		image: "/images/tvshows/alikaliverpool.png",
 		url: "https://votvot.tv"
 	},
