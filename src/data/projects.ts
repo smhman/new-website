@@ -39,5 +39,22 @@ export const projects: ProjectInfo[] = [
 				icon: "js"
 			}
 		]
+	},
+	{
+		name: "Online Radio Player",
+		description:
+			"This is a very small project. It has no purpose at all",
+		image: "https://tenor.com/view/estonia-eesti-laul-eurovision-eurovision-2023-alika-gif-14662379020582451872",
+		url: "https://raadio.sundei.eu",
+		stack: [
+			{
+				name: "HTML",
+				icon: "html"
+			},
+			{
+				name: "JavaScript",
+				icon: "js"
+			}
+		]
 	}
 ];

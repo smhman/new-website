@@ -24,7 +24,7 @@ export default function Projects() {
 		<>
 			<GenericMeta
 				title="Music 🎶"
-				description="My top music on Spotify."
+				description="Cha Cha Cha &#x1F1EB;&#x1F1EE;"
 			/>
 
 			<h1 className="heading mb-2">

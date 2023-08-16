@@ -10,8 +10,8 @@ export default function Projects() {
 	return (
 		<>
 			<GenericMeta
-				title="Projects 📙"
-				description="Some of my projects."
+				title="Finland was robbed"
+				description="Cha Cha Cha &#x1F1EB;&#x1F1EE;"
 			/>
 
 			<h1 className="heading mb-8">

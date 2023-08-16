@@ -25,8 +25,8 @@ export default function Home({
 	return (
 		<>
 			<GenericMeta
-				title="sundei 👋"
-				description="My portfolio and personal website."
+				title="Finland was robbed"
+				description="Cha Cha Cha &#x1F1EB;&#x1F1EE;"
 			/>
 
 			<h1 className="heading mb-2">

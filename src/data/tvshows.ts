@@ -19,6 +19,12 @@ export const anime: AnimeInfo[] = [
 		url: "https://www.paramountplus.com/shows/victorious/"
 	},
 	{
+		name: "Евровидение 2023: Мосты в Ливерпуль (Eurovision 2023: Bridges to Liverpool)",
+		description: "This captivating documentary follows the remarkable journey of Alika Milova, the esteemed Estonian Representative of Eurovision 2023, as she embarks on an inspiring quest towards the highly anticipated Eurovision 2023 Grand Final. Delve into the depths of her story as she navigates challenges, embraces her unique musicality, and strives for excellence on the grand stage of Eurovision.",
+		image: "/images/tvshows/alikaliverpool.png",
+		url: "https://votvot.tv"
+	},
+	{
 		name: "Eurovision Song Contest",
 		description: "The Eurovision Song Contest is a global singing competition where countries showcase original songs and viewers vote for their favorites. It's a celebration of music and cultural diversity.",
 		image: "/images/tvshows/eurovision.jpg",
