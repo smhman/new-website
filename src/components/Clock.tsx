@@ -27,10 +27,11 @@ export function Clock() {
   }, []);
 
   const formattedTime = formatter.format(now);
-  const displayTime = formattedTime.replace(" at", " ·");
 
-  // Replace "24:00" with "00:00"
-  const adjustedTime = displayTime.replace("24:00", "00:00");
+  // Check if it's midnight (00:00) and replace "24:00" with "00:00"
+  const displayTime = formattedTime.includes("24:00")
+    ? formattedTime.replace("24:00", "00:00")
+    : formattedTime;
 
-  return <>{adjustedTime}</>;
+  return <>{displayTime.replace(" at", " ·")}</>;
 }
