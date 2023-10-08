@@ -9,8 +9,8 @@ const formatter = new Intl.DateTimeFormat("en-US", {
   minute: "2-digit",
   second: "2-digit",
   hour12: false,
-  timeZone: "Europe/Copenhagen",
-  timeZoneName: "short"
+  timeZone: "Europe/Tallinn",
+  timeZoneName: "long"
 });
 
 export function Clock() {
