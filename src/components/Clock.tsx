@@ -5,11 +5,11 @@ const formatter = new Intl.DateTimeFormat("en-US", {
 	weekday: "long",
 	year: "numeric",
 	month: "long",
-	hour: "numeric",
-	minute: "numeric",
-	second: "numeric",
+	hour: "2-digit",  // Use 2-digit format for the hour
+	minute: "2-digit",
+	second: "2-digit",
 	hour12: false,
-	timeZone: "Europe/Tallinn",
+	timeZone: "Europe/Copenhagen",
 	timeZoneName: "short"
 });
 
@@ -26,5 +26,8 @@ export function Clock() {
 		return () => clearInterval(id);
 	}, []);
 
-	return <>{formatter.format(now).replace(" at", " ·")}</>;
+	const formattedTime = formatter.format(now);
+	const displayTime = formattedTime.replace(" at", " ·");
+
+	return <>{displayTime.replace("00:", "24:")}</>;
 }
