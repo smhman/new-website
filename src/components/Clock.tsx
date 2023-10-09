@@ -10,7 +10,7 @@ const formatter = new Intl.DateTimeFormat("en-US", {
   second: "2-digit",
   hour12: false,
   timeZone: "Europe/Tallinn",
-  timeZoneName: "long"
+  timeZoneName: "short"
 });
 
 export function Clock() {
@@ -22,7 +22,6 @@ export function Clock() {
     const id = setInterval(() => {
       setNow(Date.now());
     }, 1000);
-
     return () => clearInterval(id);
   }, []);
 
