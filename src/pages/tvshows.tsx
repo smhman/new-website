@@ -8,8 +8,8 @@ export default function Anime() {
 	return (
 		<>
 			<GenericMeta
-				title="Finland was robbed"
-				description="Cha Cha Cha &#x1F1EB;&#x1F1EE;"
+				title="TV Shows ✨"
+				description="Some TV shows and movies I've watched."
 			/>
 
 			<h1 className="heading mb-2">

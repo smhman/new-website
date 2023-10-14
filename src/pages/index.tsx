@@ -25,8 +25,8 @@ export default function Home({
 	return (
 		<>
 			<GenericMeta
-				title="Finland was robbed"
-				description="Cha Cha Cha &#x1F1EB;&#x1F1EE;"
+				title="sundei.ee"
+				description="Welcome!"
 			/>
 
 			<h1 className="heading mb-2">
@@ -37,6 +37,7 @@ export default function Home({
 				Hi! I&apos;m sundei, a{" "}
 				<span className="text-blue-400">{age}-year-old developer</span>{" "}
 				from <span className="text-rose-400">Tartu</span>, Estonia.
+				I am currently studying at <span className="text-blue-400">Tartu Vocational College</span>.
 			</p>
 
 			<p className="mb-2 flex flex-wrap gap-2 items-center">

@@ -77,7 +77,10 @@ export default function Discord() {
 			{lanyard ? (
 				<div>
 					<p>
-						{lanyard?.discord_user.username}
+						{lanyard?.discord_user.display_name}
+						<span className="ml-2 opacity-80">
+							{lanyard?.discord_user.username}
+						</span>
 					</p>
 					<p style={{ display: 'flex', alignItems: 'center' }}>
   {lanyard?.activities[0]?.type === 4 && lanyard?.activities[0]?.emoji && (

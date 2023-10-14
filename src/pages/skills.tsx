@@ -10,8 +10,8 @@ export default function Skills() {
 	return (
 		<>
 			<GenericMeta
-				title="Finland was robbed"
-				description="Cha Cha Cha &#x1F1EB;&#x1F1EE;"
+				title="Skills 💻"
+				description="Skills I've picked up over the years."
 			/>
 
 			<h1 className="heading mb-2">
