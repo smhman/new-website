@@ -35,9 +35,14 @@ export default function Home({
 
 			<p className="mb-4">
 				Hi! I&apos;m sundei, a{" "}
-				<span className="text-blue-400">{age}-year-old developer</span>{" "}
+				<span className="text-blue-400">{age}-year-old developer & IT-specialist</span>{" "}
 				from <span className="text-rose-400">Tartu</span>, Estonia.
-				I am currently studying at <span className="text-blue-400">Tartu Vocational College</span>.
+			</p>
+			<p className="mb-4">
+			I am currently studying at{" "}<span className="text-blue-400">Tartu Vocational College</span>.
+			</p>
+			<p className="mb-4">
+			I am unofficial tech support at{" "}<span className="text-blue-400">Universal Music Estonia</span>.
 			</p>
 
 			<p className="mb-2 flex flex-wrap gap-2 items-center">
