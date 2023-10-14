@@ -4,7 +4,11 @@ import Image from "next/future/image";
 import { useEffect, useState } from "preact/hooks";
 import { Activity, useLanyard } from "react-use-lanyard";
 import { transliterate as tr, OptionsTransliterate } from 'transliteration'; // Import OptionsTransliterate
-
+declare module "react-use-lanyard" {
+	interface DiscordUser {
+		display_name: string;
+	}
+}
 const USER_ID = "1113690068113170484";
 
 const statusColors: Record<string, string> = {
