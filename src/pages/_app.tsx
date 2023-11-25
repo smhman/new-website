@@ -4,8 +4,6 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import Layout from "../components/Layout";
 import { useEffect } from 'react';
-import $ from '@types/jquery';
-
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
