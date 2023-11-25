@@ -10,7 +10,7 @@ export default function Custom404() {
 				Seems like this page doesn&apos;t exist. Let&apos;s{" "}
 				<Link href="/">
 					<a className="border-b border-[#fff4] hover:border-white transition">
-						go back... Or listen to "ALIKA".
+						go back... Or listen to &quot;ALIKA&quot;.
 					</a>
 				</Link>
 				<div>
