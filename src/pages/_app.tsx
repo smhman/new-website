@@ -15,8 +15,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#000000" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-        <script src="https://cdn.sundei.eu/weather.js"></script>
+        <script async src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script async src="https://cdn.sundei.eu/weather.js"></script>
 
       </Head>
       <Layout>
