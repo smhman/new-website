@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <script async src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script async src="https://cdn.sundei.eu/weather.js"></script>
+        <script async src="https://sundei.ee/_vercel/insights/script.js"></script>
 
       </Head>
       <Layout>
