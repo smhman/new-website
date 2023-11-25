@@ -4,6 +4,8 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import { useEffect } from 'react';
 import $ from 'jquery';
+import { Analytics } from '@vercel/analytics/react';
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -38,6 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <Layout>
         <Component {...pageProps} />
+        <Analytics />
       </Layout>
     </>
   );
