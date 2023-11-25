@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://sundei.de/assets/js/weather.js';
+    script.src = 'https://cdn.sundei.eu/weather.js';
     document.body.appendChild(script);
 
     return () => {
