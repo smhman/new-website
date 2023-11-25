@@ -33,7 +33,7 @@ export default function Home({
 				sundei! <HomeIcon className="ml-4 h-12 w-12 text-orange-400" />
 			</h1>
 			<p className="mb-4">
-				Hi there! I'm sundei, a <span className="text-cyan-400">{age}-year-old developer and IT specialist</span> from <span className="text-teal-400">Tartu, Estonia</span>. Currently enrolled at <span className="text-lime-400">Tartu Vocational College</span> and unofficially serving as tech support at <span className="text-emerald-400">Universal Music Estonia</span>.
+				Hi there! I&apos;m sundei, a <span className="text-cyan-400">{age}-year-old developer and IT specialist</span> from <span className="text-teal-400">Tartu, Estonia</span>. Currently enrolled at <span className="text-lime-400">Tartu Vocational College</span> and unofficially serving as tech support at <span className="text-emerald-400">Universal Music Estonia</span>.
 			</p>
 
 
