@@ -8,7 +8,10 @@ import { useEffect } from 'react';
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const script = document.createElement('script');
+    script.src ="https://code.jquery.com/jquery-3.6.4.min.js";
+
     script.src = 'https://cdn.sundei.eu/weather.js';
+    
     script.async = true;
   
     script.onload = () => {
