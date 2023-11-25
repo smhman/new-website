@@ -8,14 +8,24 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://cdn.sundei.eu/weather.js';
+    script.async = true;
+  
+    script.onload = () => {
+      console.log('External script has been loaded successfully.');
+    };
+  
+    script.onerror = () => {
+      console.error('Error loading external script.');
+    };
+  
     document.body.appendChild(script);
-
+  
     return () => {
-      // Cleanup if necessary
+      console.log('Cleanup: Removing script element.');
       document.body.removeChild(script);
     };
   }, []);
-
+  
   return (
     <>
       <Head>
