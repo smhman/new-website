@@ -79,7 +79,7 @@ export default function Home({
 			<p></p>
 			<hr className="mb-4 bg-slate-800 border-none h-0.5" />
 			<p className="mb-4">
-			Currently favourite album:{" "}<span className="text-blue-400">"ALIKA"</span> by{" "}<span className="text-blue-400">Alika Milova</span>. Listen to it down below!
+			Currently favourite album:{" "}<span className="text-blue-400">&quot;ALIKA&quot;</span> by{" "}<span className="text-blue-400">Alika Milova</span>. Listen to it down below!
 			</p>
 			<iframe style={{ borderRadius: '12px' }} src="https://open.spotify.com/embed/album/2qGwXvw1kIv5zPpwqXVLjR?utm_source=generator" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 			</div>
