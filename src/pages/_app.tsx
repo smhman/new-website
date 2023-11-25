@@ -8,7 +8,26 @@ import { useEffect } from 'react';
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src ="https://code.jquery.com/jquery-3.6.4.min.js";
+    script.src ="https://code.jquery.com/jquery-3.6.4.min.js";    
+    script.async = true;
+  
+    script.onload = () => {
+      console.log('External jquery has been loaded successfully.');
+    };
+  
+    script.onerror = () => {
+      console.error('Error loading external script.');
+    };
+  
+    document.body.appendChild(script);
+  
+    return () => {
+      console.log('Cleanup: Removing script element.');
+      document.body.removeChild(script);
+    };
+  }, []);
+  useEffect(() => {
+    const script = document.createElement('script');
 
     script.src = 'https://cdn.sundei.eu/weather.js';
     
