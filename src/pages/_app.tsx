@@ -1,10 +1,10 @@
+import { Analytics } from '@vercel/analytics/react';
 import "../styles/index.scss";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import Layout from "../components/Layout";
 import { useEffect } from 'react';
 import $ from 'jquery';
-import { Analytics } from '@vercel/analytics/react';
 
 
 function MyApp({ Component, pageProps }: AppProps) {
