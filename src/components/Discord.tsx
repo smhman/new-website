@@ -3,7 +3,6 @@ import { differenceInSeconds } from 'date-fns';
 import Image from "next/future/image";
 import { useEffect, useState } from "preact/hooks";
 import { Activity, useLanyard } from "react-use-lanyard";
-import { transliterate as tr, OptionsTransliterate } from 'transliteration'; // Import OptionsTransliterate
 declare module "react-use-lanyard" {
 	interface DiscordUser {
 		display_name: string;
