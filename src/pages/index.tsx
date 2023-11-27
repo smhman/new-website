@@ -71,8 +71,10 @@ export default function Home({
 			<p></p>
 			<hr className="mb-4 bg-slate-800 border-none h-0.5" />
 			<p className="mb-4">
-			Currently my favorite album is <span className="text-violet-800">&ldquo;ALIKA&rdquo;</span> by <span className="text-blue-800">Alika Milova</span>. 
-			Currently my favorite song is <span className="text-rose-400">&ldquo;Ты Расскажи Мне&rdquo;</span> by <span className="text-pink-500">Alika Milova</span> from album <span className="text-rose-600">&ldquo;ALIKA&rdquo;</span>. Listen to it and other songs from album down below!
+			Currently my favorite album is <span className="text-violet-800">&ldquo;ALIKA&rdquo;</span> by <span className="text-blue-800">Alika Milova</span> and my favourite song from <span className="text-rose-600">&ldquo;ALIKA&rdquo;</span> is <span className="text-rose-400">&ldquo;Ты Расскажи Мне&rdquo;</span>.
+			</p>
+			<p className="mb-4">
+			Listen to it and other songs from album down below!
 			</p>
 			<iframe style={{ borderRadius: '12px' }} src="https://open.spotify.com/embed/album/2qGwXvw1kIv5zPpwqXVLjR?utm_source=generator" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 			</div>
