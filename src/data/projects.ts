@@ -23,8 +23,8 @@ export const projects: ProjectInfo[] = [
 		name: "Crystal PS",
 		description:
 			"\"Crystal PS\" is a popular private server for the multiplayer sandbox game Growtopia. It offers an exclusive and customized gaming experience, providing players with unique features, events, and a vibrant community, enhancing the excitement and creativity of the Growtopia universe.",
-		image: "/images/projects/projectmnt.png",
-		url: "https://projectmnt.tech",
+		image: "/images/projects/crystalps.gif",
+		url: "https://crystalps.eu",
 		stack: [
 			{
 				name: "C++",
